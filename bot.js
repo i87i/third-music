@@ -43,7 +43,7 @@ bot.on("ready", async () => {
 
 });
 bot.on('message', message => {
-if(message.content.startsWith(prefix + 'come')) {
+if(message.content.startsWith(prefix + 'join')) {
       bot.channels.get('478035881366650901').join().then(() => message.channel.send(`Joined`));
 }
 });
