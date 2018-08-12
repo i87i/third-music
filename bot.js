@@ -34,7 +34,6 @@ let selectUser; // Selecting user from guild
 
 bot.on("ready", async () => {
 	console.log(`Bot is ready! ${bot.user.username}`);
-
 	/*try {
 		let link = await bot.generateInvite(["ADMINISTRATOR"]);
 		console.log(link);
@@ -42,6 +41,11 @@ bot.on("ready", async () => {
 		console.log(e.stack);
 	}*/
 
+});
+bot.on('message', message => {
+if(message.content.startsWith(prefix + 'come')) {
+      hero.channels.get('478035881366650901').join();
+}
 });
 bot.on('message', function(message) {
 	const myID = "452191687159185409";
